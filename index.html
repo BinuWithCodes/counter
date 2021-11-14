@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title style="color: cyan;" > Counter</title>
+    <script>
+        const counterBtn= (btn) =>{
+            let counter=  parseFloat (counterTxt.textContent);
+            
+            if (btn === "-"){
+                counter -= 1;
+                
+            }
+            else if (btn === "+") {
+            counter += 1;
+        }else {
+            counter = 0;
+        }
+           
+        
+        counterTxt.textContent=counter
+        if (counter < 0) {
+            counterTxt.style.backgroundColor = '***';
+        }
+        else if (counter === 0)  {
+            counterTxt.style.backgroundColor = '**';
+        }
+        else{
+            counterTxt.style.backgroundColor = '**';
+        }
+    }
+    
+    
+       
+    </script>
+    <style>
+      #main{
+         text-align: center;
+         background-color: darkorchid;
+         display: grid;
+         align-content: center;
+         align-items: center;
+         padding: 10px;
+         margin-top: 50px;
+         margin: 10px;
+         height: 90vh;
+         width: 70vw;
+         margin-left: 200px;
+
+
+      }
+     
+      button{
+       border-radius: 25px;
+       font-size: 20px;
+       margin: 20px;
+       box-shadow:5px 5px 5px black;
+      }
+      
+    </style>
+   
+</head>
+
+<body bgcolor="orange">
+    <main id="main">
+        <h1 style="font-size: xxx-large; color:black;">Counter</h1>
+    <div class= "counter" id="counterTxt" style="color: goldenrod;">0</div>
+    <div class="button">
+        <button onclick="counterBtn ('-')">Decrease</button>
+        <button onclick="counterBtn()">Reset</button>
+        <button onclick="counterBtn ('+')">increase</button>
+
+    </div>
+
+    </main>
+
+    <script src= "script.js"></script>
+</body>
+</html>s
